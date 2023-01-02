@@ -1,6 +1,7 @@
 import qrcode
 from tkinter import *
 from tkinter import messagebox
+#from PIL import ImageTk, Image
 
 # Creating the window
 wn = Tk()
@@ -23,6 +24,9 @@ def generateCode():
     # Showing the pop up message on saving the file
     messagebox.showinfo("QR Code Generator", "QR Code is saved successfully!")
 
+
+#c = Canvas(wn, width=500, height=500)
+#c.pack()
 
 # Label for the window
 headingFrame = Frame(wn, bg="azure", bd=5)
@@ -76,6 +80,11 @@ size.place(relx=0.05, rely=0.4, relwidth=0.5, relheight=0.2)
 # Button to generate and save the QR Code
 button = Button(wn, text='Generate Code', font=('Courier', 15, 'normal'), command=generateCode)
 button.place(relx=0.35, rely=0.9, relwidth=0.25, relheight=0.05)
+
+print(label2)
+
+#img = ImageTk.PhotoImage(Image.open("D:\pyprogs\Projects\qr-maker\hola.png"))
+#c.create_image(20, 20, anchor=NW, image=img)
 
 # Runs the window till it is closed manually
 wn.mainloop()
