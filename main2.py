@@ -1,7 +1,6 @@
 import qrcode
 from tkinter import Tk, Frame, Label, Entry, Button, messagebox, Canvas
-
-# from PIL import ImageTk, Image
+from PIL import ImageTk, Image
 
 # Creating the window
 wn = Tk()
@@ -22,11 +21,12 @@ def generateCode():
     fileDirec = loc.get() + '\\' + name.get()  # Getting the directory where the file has to be saved
     img.save(f'{fileDirec}.png')  # Saving the QR Code
     # Showing the pop-up message on saving the file
+    rawimg = Image.open(f'{fileDirec}.png')
+    rawimg = rawimg.resize((150, 150), Image.LANCZOS)
+    qrimg = ImageTk.PhotoImage(rawimg)
+    qrdisp = Label(Frame5, image=qrimg)
+    qrdisp.place(relx=0.25, rely=0.15, relwidth=0.5, relheight=0.8)
     messagebox.showinfo("QR Code Generator", "QR Code is saved successfully!")
-
-
-# c = Canvas(wn, width=500, height=500)
-# c.pack()
 
 # Label for the window
 headingFrame = Frame(wn, bg="grey", bd=5)
@@ -67,7 +67,7 @@ size = Entry(Frame4, font='Helvetica 9')
 size.place(relx=0.25, rely=0.4, relwidth=0.5, relheight=0.3)
 
 # Button to generate and save the QR Code
-button = Button(wn, text='Generate Code', font='Helvetica 9', command=generateCode)
+button = Button(wn, text='Generate Code', font='Helvetica 9 bold', command=generateCode)
 button.place(relx=0.37, rely=0.6, relwidth=0.25, relheight=0.06)
 
 # QR Code Display
@@ -77,10 +77,6 @@ label5 = Label(Frame5, text="QR Display", bg="slate blue", fg='azure', font=('He
 label5.place(relx=0.38, rely=0.0, relheight=0.2)
 canvas = Canvas(Frame5, bg='white', height=75, width=75)
 canvas.place(relx=0.25, rely=0.15, relwidth=0.5, relheight=0.8)
-
-
-# img = ImageTk.PhotoImage(Image.open("D:\pyprogs\Projects\qr-maker\hola.png"))
-# c.create_image(20, 20, anchor=NW, image=img)
 
 # Runs the window till it is closed manually
 wn.mainloop()
