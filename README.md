@@ -1,7 +1,7 @@
 # qrify app   
 
 ## App display:   
-![ss1](https://user-images.githubusercontent.com/63915540/211075626-fe352272-6826-417a-ba2f-3bbc88497724.png)
+![ss1](https://user-images.githubusercontent.com/63915540/211077120-76d7dc26-b39f-4ab8-b8eb-3f2a622ae83b.png)
 
 
 
