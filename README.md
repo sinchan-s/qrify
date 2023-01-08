@@ -1,7 +1,8 @@
 # qrify app   
 
 ## App display:   
-![ss1](https://user-images.githubusercontent.com/63915540/210842617-612bb8b5-3fef-471e-8d3c-efb522d77860.png)
+![ss1](https://user-images.githubusercontent.com/63915540/211077120-76d7dc26-b39f-4ab8-b8eb-3f2a622ae83b.png)
+
 
 
 #### Sample QR images:
