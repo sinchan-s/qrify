@@ -4,7 +4,7 @@ from PIL import ImageTk, Image
 
 # Creating the window
 wn = Tk()
-wn.title('QR Code Generator')
+wn.title('QRify app')
 wn.geometry('400x500')
 wn.config(bg='slate blue')
 
