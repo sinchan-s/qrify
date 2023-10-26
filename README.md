@@ -1,6 +1,8 @@
-# qrify app   
+# QRify app   
 
-## App display:   
+### App display:   
+A standalone python app built on python's inbiult library: Tkinter   
+   
 ![ss1](https://user-images.githubusercontent.com/63915540/211077120-76d7dc26-b39f-4ab8-b8eb-3f2a622ae83b.png)
 
 
